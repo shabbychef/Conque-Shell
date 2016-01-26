@@ -1232,10 +1232,10 @@ function! conque_term#send_selected(type) "{{{
     let reg_save = @@
     sil exe "normal! `<" . a:type . "`>y"
 
-		" * Mon Jan 25 2016 03:58:12 PM Steven E. Pav shabbychef@gmail.com
-		" prefix and suffix support;
-		" cf. http://vi.stackexchange.com/q/4901/4686
-		let @@ = g:ConqueTerm_PrefixString . @@ . g:ConqueTerm_SuffixString 
+    " * Mon Jan 25 2016 03:58:12 PM Steven E. Pav shabbychef@gmail.com
+    " prefix and suffix support;
+    " cf. http://vi.stackexchange.com/q/4901/4686
+    let @@ = g:ConqueTerm_PrefixString . @@ . g:ConqueTerm_SuffixString 
     let @@ = substitute(@@, '^[\r\n]*', '', '')
     let @@ = substitute(@@, '[\r\n]*$', '', '')
 
